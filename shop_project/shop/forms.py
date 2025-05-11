@@ -50,13 +50,6 @@ class ClientProfileForm(forms.ModelForm):
         exclude = ('user',)
 
 
-# class ProfileForm(forms.ModelForm):
-#     class Meta:
-#         model = Profile
-#         fields = ['phone_number', 'address_city']
-
-
-
 class ClientForm(forms.Form):
     first_name = forms.CharField(label='Имя')
     last_name = forms.CharField(label='Фамилия')
@@ -92,6 +85,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
+        # fields = ['phone_number', 'address_city']
         fields = ['first_name', 'last_name', 'email', 'phone_number', 'address_city']
 
     def save(self, commit=True):

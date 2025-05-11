@@ -246,7 +246,7 @@ def products_list(request):
     return render(request, 'products_list.html', context)
 
 def products_total(request):
-    products = Product.objects.all()  # Загружаем все продукты из базы данных
+    products = Product.objects.all()  # Все продукты из базы данных
     context = {'products': products}
     return render(request, 'products_total.html', context)
 

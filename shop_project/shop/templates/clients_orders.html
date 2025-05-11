@@ -8,7 +8,7 @@
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Показать заказы</button>
+    <button class="button" type="submit">Показать заказы</button>
 </form>
 <article class="blank">
     {% if client and products is not None %}
